@@ -63,3 +63,7 @@ def parse_line(line):
         return None, err
 
     return {"fio": fio, "mail": mail, "phone": phone, "group": group}, None
+
+# НОВАЯ ФУНКЦИЯ: достаем домен почты для улучшения
+def get_mail_domain(mail):
+    return mail.split("@")[1] if "@" in mail else ""
